@@ -1,0 +1,74 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package javalibs;
+
+import java.awt.Component;
+import javax.swing.Icon;
+import javax.swing.JOptionPane;
+
+public class JavaLibs {
+    public JavaLibs() {
+    }
+
+    public static void main(String[] args) {
+        String question9 = "";
+        String[] options = new String[]{"true", "false"};
+        int introInt = JOptionPane.showOptionDialog((Component)null, "Hello contestant, and welcome to America’s favorite dating show!  Before we send you on a date, we’ll need to ask you 10 love-compatibility questions.  Is this OK?", "Welcome contestant!", 0, 1, (Icon)null, options, options[0]);
+        if (introInt != 0) {
+            JOptionPane.showMessageDialog((Component)null, "That's too bad.  Please come back if you change your mind.", "Not OK", 0);
+            System.exit(0);
+        }
+
+        String question1 = (String)JOptionPane.showInputDialog((Component)null, "What is your name?", "Question 1", 3, (Icon)null, (Object[])null, "String");
+        question1 = question1.toUpperCase();
+        String question2 = (String)JOptionPane.showInputDialog((Component)null, "Complete this sentence:  My idea of a romantic evening involves _________.", "Question 2", 3, (Icon)null, (Object[])null, "String");
+        question2 = question2.toUpperCase();
+        String question3 = (String)JOptionPane.showInputDialog((Component)null, "What is your favorite food?", "Question 3", 3, (Icon)null, (Object[])null, "String");
+        question3 = question3.toUpperCase();
+        String question4 = (String)JOptionPane.showInputDialog((Component)null, "Name an animal.", "Question 4", 3, (Icon)null, (Object[])null, "String");
+        question4 = question4.toUpperCase();
+        String question5 = (String)JOptionPane.showInputDialog((Component)null, "What word would you use to describe a " + question4 + "?", "Question 5", 3, (Icon)null, (Object[])null, "String");
+        question5 = question5.toUpperCase();
+        String question6 = (String)JOptionPane.showInputDialog((Component)null, "Name a body part.", "Question 6", 3, (Icon)null, (Object[])null, "String");
+        question6 = question6.toUpperCase();
+        String question7 = (String)JOptionPane.showInputDialog((Component)null, "What word would you use to describe a " + question6 + "?", "Question 7", 3, (Icon)null, (Object[])null, "String");
+        question7 = question7.toUpperCase();
+        String question8 = (String)JOptionPane.showInputDialog((Component)null, "Choose a verb in the past tense.", "Question 8", 3, (Icon)null, (Object[])null, "String");
+        question8 = question8.toUpperCase();
+
+        int int9;
+        while(true) {
+            try {
+                question9 = (String)JOptionPane.showInputDialog((Component)null, "How much would you spend on a dinner-date?", "Question 9", 3, (Icon)null, (Object[])null, "int");
+                int9 = Integer.parseInt(question9);
+                break;
+            } catch (Exception var18) {
+                if (question9 != null && question9.contains("$")) {
+                    JOptionPane.showMessageDialog((Component)null, "An int cannot contain a $ symbol.", "$$$", 1);
+                } else {
+                    JOptionPane.showMessageDialog((Component)null, "An int is a whole number between -2^31 and 2^31 -1.", "What is an int?", 1);
+                }
+            }
+        }
+
+        double double10;
+        while(true) {
+            try {
+                String question10 = (String)JOptionPane.showInputDialog((Component)null, "What is your favorite number between 0 and 1?", "Question 10", 3, (Icon)null, (Object[])null, "double");
+                double10 = Double.parseDouble(question10);
+                break;
+            } catch (Exception var17) {
+                JOptionPane.showMessageDialog((Component)null, "A double is a number with decimal precision such as 1.0, 0.4323, or -3.14.", "What is a double?", 1);
+            }
+        }
+
+        JOptionPane.showMessageDialog((Component)null, "Thank you " + question1 + ".  Enjoy your date and we’ll talk with you later in the show!", "Thank you!", 1);
+        JOptionPane.showOptionDialog((Component)null, "Welcome back " + question1 + "!  Tell me, how do you think your date went?  Is it true that people generally happy after dating you?", "Welcome back!", 0, 1, (Icon)null, options, options[0]);
+        JOptionPane.showMessageDialog((Component)null, "Your date Alex has been listening back stage and might like to disagree with you.  Ladies and gentlemen, please welcome Alex!", "Surprise!", 2);
+        String story = "I have a lot to tell you about my date with " + question1 + "!  First we had dinner.  I convinced " + question1 + " that we\n" + "should share the roasted " + question4 + " " + question6 + ".  " + question1 + " kept talking about " + question2 + " and the number " + double10 + "\n" + "or something.  The meal was too " + question7 + " and I insisted on leaving a $" + double10 + " tip!  " + question1 + "\n" + "said that was only " + double10 / (double)(int9 * 3) * 100.0D + "% on a $" + int9 * 3 + " meal.\n" + "\n" + "We ended the night with a movie called “Attack of the " + question3 + "”.  I " + question8 + " with " + question1 + ", and that’s\n" + "when I really started to appreciate how " + question5 + " " + question1 + " was.  I’m in love and want " + question1 + " to marry me! \n\n\n";
+        JOptionPane.showMessageDialog((Component)null, story, "A Romantic Evening!", 1);
+    }
+}
